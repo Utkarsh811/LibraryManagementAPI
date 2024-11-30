@@ -1,0 +1,9 @@
+pathparam
+requestparam
+pathvariable
+requestbody
+
+@Modifying
+@Transactional
+@Query("UPDATE User u SET u.password = ?1 WHERE u.username = ?2")
+int updatePassword(String password, String username);
